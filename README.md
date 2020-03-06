@@ -5,6 +5,9 @@ Our goal is to create the next great social media app, aimed at those who have a
 
 # Members:
 Chris Behrens
+
 Matt Cluff
+
 Aiden Johnson
+
 Zac Eskridge
