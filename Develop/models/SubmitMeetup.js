@@ -7,6 +7,9 @@ module.exports = function (sequelize, DataTypes) {
         date: {
             type: DataTypes.STRING,
             allowNull: false,
+            validate: {
+                len: [3, 10]
+              },
         },
         time: {
             type: DataTypes.STRING,
