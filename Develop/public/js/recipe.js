@@ -3,19 +3,20 @@ $(document).ready(function () {
     const drinkNameInput = $("#drinkName");
     const recipeInput = $("#recipeBody");
     const spiritInput = $("#category");
+
     //this needs to be the ID of the button you click when you want to drink at home
+    const atHome = $("#atHome");
 
-    const atHome =$("#atHome");
-
-    atHome.on("click", function(event) {
+    // On click of the "At home", pulls the data from the api-route for all recipes
+    atHome.on("click", function (event) {
         event.preventDefault();
-        $.get("/api/post_recipe", function(data) {
+        $.get("/api/post_recipe", function (data) {
             recipes = data;
             console.log(recipes)
-          });
+        });
 
     })
-   
+
     postRecipeForm.on("submit", function (event) {
         event.preventDefault();
         const recipeData = {
@@ -45,6 +46,7 @@ $(document).ready(function () {
             spirit: spirit
         })
             .then(function (data) {
+                // Need to change route to where ever we want users redirected after recipe has been posted
                 window.location.replace("/members");
                 // If there's an error, handle it by throwing up a bootstrap alert
             })
