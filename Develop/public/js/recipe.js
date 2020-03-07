@@ -3,8 +3,19 @@ $(document).ready(function () {
     const drinkNameInput = $("#drinkName");
     const recipeInput = $("#recipeBody");
     const spiritInput = $("#category");
+    //this needs to be the ID of the button you click when you want to drink at home
 
-    // When the signup button is clicked, we validate the email and password are not blank
+    const atHome =$("#atHome");
+
+    atHome.on("click", function(event) {
+        event.preventDefault();
+        $.get("/api/post_recipe", function(data) {
+            recipes = data;
+            console.log(recipes)
+          });
+
+    })
+   
     postRecipeForm.on("submit", function (event) {
         event.preventDefault();
         const recipeData = {
