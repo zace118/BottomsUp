@@ -26,3 +26,19 @@ button.edit {
   margin-top: 30px;
 }
 /* --------------------- */
+
+.button1 {
+  margin-right: 100px;
+}
+
+.button2 {
+  margin-right: 50px;
+}
+
+.image1 {
+  /* The image used */
+  background-image: url("eating_out.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
