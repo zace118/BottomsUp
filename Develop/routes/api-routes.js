@@ -105,14 +105,14 @@ module.exports = function (app) {
         });
     });
 
-      app.get("/api/post_meetup",  function(req, res) {
-        
+    app.get("/api/post_meetup", function (req, res) {
+
         // findAll returns all entries for a table when used with no options
-        db.SubmitMeetup.findAll({}).then(function(meetup) {
-          // We have access to the todos as an argument inside of the callback function
-          res.json(meetup);
+        db.SubmitMeetup.findAll({}).then(function (meetup) {
+            // We have access to the todos as an argument inside of the callback function
+            res.json(meetup);
         });
-      });
+    });
 
 
 };
