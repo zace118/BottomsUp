@@ -2,7 +2,7 @@
   "development": {
     "username": "root",
     "password": "Bearpaw11",
-    "database": "passport_demo",
+    "database": "bottomsup",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
