@@ -4,7 +4,7 @@ $(document).ready(function () {
     const recipeInput = $("#recipeBody");
     const spiritInput = $("#category");
 
-    // When the signup button is clicked, we validate the email and password are not blank
+    // When the Post Recipe button is clicked, we sending the data as an object
     postRecipeForm.on("submit", function (event) {
         event.preventDefault();
         const recipeData = {
