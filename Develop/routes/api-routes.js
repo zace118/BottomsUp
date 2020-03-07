@@ -47,7 +47,7 @@ module.exports = function (app) {
         }
     });
 
-    // 
+    // Route for posting a recipe to the database
     app.post("/api/post_recipe", function (req, res) {
         console.log(req.body);
         console.log(db.user);
@@ -62,4 +62,28 @@ module.exports = function (app) {
             res.status(401).json(err);
         });
     });
+
+    app.get("/api/user_data", function (req, res) {
+        if (!req.user) {
+            // The user is not logged in, send back an empty object
+            res.json({});
+        } else {
+            // Otherwise send back the user's email and id
+            // Sending back a password, even a hashed password, isn't a good idea
+            res.json({
+                email: req.user.email,
+                id: req.user.id
+            });
+        }
+    });
+    
+    app.get("/api/post_recipe",  function(req, res) {
+        
+        // findAll returns all entries for a table when used with no options
+        db.SubmitRecipe.findAll({}).then(function(recipe) {
+          // We have access to the todos as an argument inside of the callback function
+          res.json(recipe);
+        });
+      });
+
 };

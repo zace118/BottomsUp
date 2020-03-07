@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "root",
+    "password": "Bearpaw11",
     "database": "bottomsup",
     "host": "127.0.0.1",
     "dialect": "mysql"
