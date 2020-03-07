@@ -47,5 +47,19 @@ module.exports = function (app) {
         }
     });
 
-
+    // 
+    app.post("/api/post_recipe", function (req, res) {
+        console.log(req.body);
+        console.log(db.user);
+        db.SubmitRecipe.create({
+            title: req.body.title,
+            recipe: req.body.recipe,
+            spirit: req.body.spirit
+        }).then(function (dbPost) {
+            // return the result to the user with res.json
+            res.json(dbPost);
+        }).catch(function (err) {
+            res.status(401).json(err);
+        });
+    });
 };
