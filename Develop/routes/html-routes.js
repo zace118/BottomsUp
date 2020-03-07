@@ -27,15 +27,4 @@ module.exports = function (app) {
     app.get("/members", isAuthenticated, function (req, res) {
         res.sendFile(path.join(__dirname, "../public/members.html"));
     });
-
-
-    // //Display "At Home" HTML page
-    // app.get("/members/at_home", isAuthenticated, function (req, res) {
-    //     res.sendFile(path.join(__dirname, "../public/atHome.html"));
-    // })
-
-    // //Display "Going out" HTML page
-    // app.get("/members/going_out", isAuthenticated, function (req, res) {
-    //     res.sendFile(path.join(__dirname, "../public/goingOut.html"));
-    // })
 };

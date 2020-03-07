@@ -2,6 +2,45 @@
 const bcrypt = require("bcryptjs");
 // Creating our User model
 module.exports = function (sequelize, DataTypes) {
+    const submitRecipe = sequelize.define("submitRecipe", {
+        title: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            unique: true
+        },
+        recipe: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            unique: true
+        },
+        spirit: {
+            type: DataTypes.STRING,
+            allowNull: false
+        }
+    });
+
+    const submitMeetup = sequelize.define("submitMeetup", {
+        location: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        date: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        time: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            unique: true
+        },
+        message: {
+            type: DataTypes.STRING,
+            allowNull: false
+        }
+    });
+
+
+
     const User = sequelize.define("User", {
         // The email cannot be null, and must be a proper email before creation
         email: {
@@ -17,12 +56,8 @@ module.exports = function (sequelize, DataTypes) {
             type: DataTypes.STRING,
             allowNull: false
         },
-
-        name: {
-            type: DataTypes.STRING,
-            allowNull: false
-        }
     });
+
     // Creating a custom method for our User model. This will check if an unhashed password entered by the user can be compared to the hashed password stored in our database
     User.prototype.validPassword = function (password) {
         return bcrypt.compareSync(password, this.password);
@@ -32,12 +67,6 @@ module.exports = function (sequelize, DataTypes) {
     User.addHook("beforeCreate", function (user) {
         user.password = bcrypt.hashSync(user.password, bcrypt.genSaltSync(10), null);
     });
-    return User;
+    return submitRecipe, submitMeetup, User;
 
-
-    const Recipe = sequelize.deine("Recipe", {
-        title,
-        body,
-
-    })
 };
