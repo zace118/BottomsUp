@@ -25,20 +25,111 @@ button.edit {
 .top-30 {
   margin-top: 30px;
 }
-/* --------------------- */
 
-.button1 {
-  margin-right: 100px;
-}
+/* Members Page CSS */
 
-.button2 {
-  margin-right: 50px;
-}
-
-.image1 {
-  /* The image used */
-  background-image: url("eating_out.png");
-  background-position: center;
+.members {
+  margin: 0;
+  padding: 0;
+  background-image: url('../images/BottomsUp.jpg');
   background-repeat: no-repeat;
-  background-size: cover;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+
+.welcome-color {
+  color: rgb(230, 49, 49);
+  font-size: 30px;
+  font-family: 'Rock Salt', cursive;
+  text-align: center;
+}
+
+.logout-btn {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.welcome-images {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.list-images {
+  width: 100%;
+  height: 50px;
+  margin: 0;
+  padding: 0;
+  background: rgba (0,0,0,.2);
+  box-sizing: border-box;
+  display:flex;
+  list-style: none;
+  width: 50%;
+}
+
+.list-images:nth-child(3) .logout-btn + img {
+  opacity: 1;
+}
+
+img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  transition: 0.5s;
+  opacity: 0;
+}
+
+.btn1 {
+  display:inline-block;
+  margin-top: 475px;
+  margin-left: 250px;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  border-color: yellow;
+}
+
+
+.btn1:hover + img {
+  opacity: 1;
+  animation: animate 40s linear infinite;
+}
+
+.btn2 {
+  display:inline-block;
+  margin-top: 475px;
+  margin-left: 15px;
+  background-color: #000;
+  color: white;
+  border-color: orange;
+}
+
+.btn2:hover + img {
+  opacity: 1;
+  animation: animate 40s linear forwards;
+}
+
+.logout-btn:hover + img {
+  opacity: 1;
+  animation: animate 60s linear forwards;
+}
+
+@keyframes animate {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(2);
+  }
+}
+
+
+.wrapper{
+  float:left;
+  width:100%;
+  text-align:center;
 }

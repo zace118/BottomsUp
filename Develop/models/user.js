@@ -2,45 +2,6 @@
 const bcrypt = require("bcryptjs");
 // Creating our User model
 module.exports = function (sequelize, DataTypes) {
-    const submitRecipe = sequelize.define("submitRecipe", {
-        title: {
-            type: DataTypes.STRING,
-            allowNull: false,
-            unique: true
-        },
-        recipe: {
-            type: DataTypes.STRING,
-            allowNull: false,
-            unique: true
-        },
-        spirit: {
-            type: DataTypes.STRING,
-            allowNull: false
-        }
-    });
-
-    const submitMeetup = sequelize.define("submitMeetup", {
-        location: {
-            type: DataTypes.STRING,
-            allowNull: false,
-        },
-        date: {
-            type: DataTypes.STRING,
-            allowNull: false,
-        },
-        time: {
-            type: DataTypes.STRING,
-            allowNull: false,
-            unique: true
-        },
-        message: {
-            type: DataTypes.STRING,
-            allowNull: false
-        }
-    });
-
-
-
     const User = sequelize.define("User", {
         // The email cannot be null, and must be a proper email before creation
         email: {
@@ -67,6 +28,6 @@ module.exports = function (sequelize, DataTypes) {
     User.addHook("beforeCreate", function (user) {
         user.password = bcrypt.hashSync(user.password, bcrypt.genSaltSync(10), null);
     });
-    return submitRecipe, submitMeetup, User;
 
+    return User;
 };
