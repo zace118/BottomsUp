@@ -19,7 +19,14 @@ module.exports = function (sequelize, DataTypes) {
         message: {
             type: DataTypes.STRING,
             allowNull: false
-        }
+        },
+
+         author: {
+            type: DataTypes.STRING,
+            allowNull: false
+         }
+
+
     });
 
     return SubmitMeetup;
