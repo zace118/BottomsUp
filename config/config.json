@@ -3,11 +3,7 @@
 {
   "development": {
     "username": "root",
-<<<<<<< HEAD:Develop/config/config.json
     "password": "root",
-=======
-    "password": "Bearpaw11",
->>>>>>> dbcf5ca606996663598b34fe476cd0b9da2d7786:config/config.json
     "database": "bottomsup",
     "host": "127.0.0.1",
     "dialect": "mysql"
