@@ -13,7 +13,11 @@ module.exports = function (sequelize, DataTypes) {
         spirit: {
             type: DataTypes.STRING,
             allowNull: false
-        }
+        },
+        author: {
+            type: DataTypes.STRING,
+            allowNull: false
+         }
     });
 
     return SubmitRecipe;

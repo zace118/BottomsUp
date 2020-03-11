@@ -23,7 +23,7 @@
                 <form id="meetup">
                     <div class="form-group">
                         <label for="title">Location:</label>
-                        <input type="text" class="form-control" id="location">
+                        <input type="text" class="form-control" placeholder="Location of Meetup" id="location">
                         <br />
                         <label for="title">Date:</label>
                         <input type="text" class="form-control" id="date" placeholder="MM/DD/YY" minlength="4"
@@ -33,7 +33,10 @@
                         <input type="text" class="form-control" id="time">
                         <br />
                         <label for="body">Message:</label>
-                        <textarea class="form-control" rows="10" id="message"></textarea>
+                        <textarea class="form-control" rows="10" placeholder="enter the details of this meetup" id="message"></textarea>
+                        <br />
+                        <label for="title">Posted By:</label>
+                        <input type="text" class="form-control" placeholder="Your Name" id="author">
                         <br />
                         <button type="submit" class="btn btn-success submit btn-lg">Submit Meetup</button>
                     </div>
