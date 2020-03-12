@@ -27,4 +27,9 @@ module.exports = function (app) {
     app.get("/members", isAuthenticated, function (req, res) {
         res.sendFile(path.join(__dirname, "../public/members.html"));
     });
+
+    // TESTING
+    // app.get("/meetup.html", isAuthenticated, function (req, res) {
+    //     res.sendFile(path.join(__dirname, "../public/meetup.html"));
+    // });
 };

@@ -3,7 +3,7 @@ $(document).ready(function () {
     const drinkNameInput = $("#drinkName");
     const recipeInput = $("#recipeBody");
     const spiritInput = $("#category");
-    const authorInput =$("#author")
+    const authorInput = $("#author")
 
     //this needs to be the ID of the button you click when you want to drink at home
     const atHome = $("#atHome");
@@ -20,6 +20,7 @@ $(document).ready(function () {
 
     postRecipeForm.on("submit", function (event) {
         event.preventDefault();
+        console.log("recipe.js is working");
         const recipeData = {
             title: drinkNameInput.val().trim(),
             recipe: recipeInput.val().trim(),
@@ -51,10 +52,10 @@ $(document).ready(function () {
         })
             .then(function (data) {
                 // Need to change route to where ever we want users redirected after recipe has been posted
-                window.location.replace("/members");
+                window.location.replace("/viewRecipes.html");
                 // If there's an error, handle it by throwing up a bootstrap alert
             })
-            .catch(handleLoginErr);
+        // .catch(handleLoginErr);
     }
 
 })

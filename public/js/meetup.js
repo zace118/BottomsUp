@@ -21,6 +21,7 @@ $(document).ready(function () {
 
     postMeetupForm.on("submit", function (event) {
         event.preventDefault();
+        console.log("meetup.js is working");
         const meetupData = {
             location: locationInput.val().trim(),
             date: dateInput.val().trim(),
@@ -47,7 +48,7 @@ $(document).ready(function () {
 
     //Function that posts user recipe
     function postMeetup(location, date, time, message, author) {
-        $.post("/api/post_recipe", {
+        $.post("/api/post_meetup", {
             location: location,
             date: date,
             time: time,
@@ -56,10 +57,10 @@ $(document).ready(function () {
         })
             .then(function (data) {
                 // Need to change route to where ever we want users redirected after meetup has been posted
-                window.location.replace("/members");
+                window.location.replace("/viewMeetups.html");
                 // If there's an error, handle it by throwing up a bootstrap alert
             })
-            .catch(handleLoginErr);
+        // .catch(handleLoginErr);  
     }
 
 })
