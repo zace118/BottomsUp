@@ -69,7 +69,7 @@ module.exports = function (app) {
     });
 
     // Route for posting a meetup to the database
-    app.post("/api/post_meetup", passport.authenticate("local"), function (req, res) {
+    app.post("/api/post_meetup", function (req, res) {
         // app.post("/api/post_meetup", function (req, res) {
         console.log(req.body);
         console.log(db.user);
