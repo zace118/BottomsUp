@@ -1,4 +1,9 @@
 $(document).ready(function () {
+    $.get("/api/post_meetup", function (recipes) {
+        console.log(recipes);
+        // stuff to do on the page
+    });
+
     const postMeetupForm = $("form#meetup");
     const locationInput = $("#location");
     const dateInput = $("#date");
