@@ -22,4 +22,3 @@ $("#inPublic").on("click", function () {
         console.log("members.js line 22...data: " + data);
     })
 })
-

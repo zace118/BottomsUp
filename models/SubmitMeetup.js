@@ -13,18 +13,17 @@ module.exports = function (sequelize, DataTypes) {
         },
         time: {
             type: DataTypes.STRING,
-            allowNull: false,
-            unique: true
+            allowNull: false
         },
         message: {
             type: DataTypes.STRING,
             allowNull: false
         },
 
-         author: {
+        author: {
             type: DataTypes.STRING,
             allowNull: false
-         }
+        }
 
 
     });

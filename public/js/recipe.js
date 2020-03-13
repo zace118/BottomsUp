@@ -1,4 +1,10 @@
 $(document).ready(function () {
+    // On click of the "At home", pulls the data from the api-route for all recipes
+    $.get("/api/post_recipe", function (recipes) {
+        console.log(recipes);
+        // stuff to do on the page
+    });
+
     const postRecipeForm = $("form#recipe");
     const drinkNameInput = $("#drinkName");
     const recipeInput = $("#recipeBody");
@@ -6,16 +12,7 @@ $(document).ready(function () {
     const authorInput = $("#author")
 
     //this needs to be the ID of the button you click when you want to drink at home
-    const atHome = $("#atHome");
-
-    // // On click of the "At home", pulls the data from the api-route for all recipes
-    // atHome.on("click", function (event) {
-    //     event.preventDefault();
-    //     $.get("/api/post_recipe", function (recipes) {
-    //         console.log(recipes)
-    //     });
-
-    // })
+    // const atHome = $("#atHome");
 
     postRecipeForm.on("submit", function (event) {
         event.preventDefault();
@@ -57,4 +54,4 @@ $(document).ready(function () {
         // .catch(handleLoginErr);
     }
 
-})
+});
