@@ -10,19 +10,30 @@
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <style>
+        @import url(https://fonts.googleapis.com/css?family=Walter+Turncoat);
         body {
             font-family: Arial;
             padding: 20px;
-            background-image: linear-gradient(to bottom right, red, yellow);
-            ;
+            background-image: url(https://img.freepik.com/free-photo/black-chalk-board-texture_89245-170.jpg?size=626&ext=jpg);
+            background-size: cover;
+            position: relative;
+        
+            
         }
 
         /* Header/Blog Title */
         .header {
             padding: 30px;
-            font-size: 40px;
+            font-size: 200px;
             text-align: center;
-            background: yellow;
+            color: #f56991;
+            font-family: "Walter Turncoat", cursive;
+            display: block;
+            width: 80%;
+            height: 80%;
+            min-height: auto;
+            margin: 30px auto 0 auto;
+            padding: 20px 30px;
         }
 
         /* Create two unequal columns that floats next to each other */
@@ -30,18 +41,29 @@
         .leftcolumn {
             float: left;
             width: 75%;
+            padding: 30px;
+            font-size: 40px;
+            color: #e8e8e8;
+            font-family: "Walter Turncoat", cursive;
+            display: block;
+            min-height: auto;   
         }
 
         /* Right column */
         .rightcolumn {
             float: left;
             width: 25%;
-            padding-left: 20px;
+            padding: 30px;
+            font-size: 40px;
+            color: #D57000;
+            font-family: "Walter Turncoat", cursive;
+            display: block;
+            min-height: auto;
         }
 
         /* Add a card effect for articles */
         .card {
-            background-color: white;
+            
             padding: 20px;
             margin-top: 20px;
         }
@@ -75,13 +97,13 @@
 
 <body>
     <div class="header">
-        <h2>Meet Ups</h2>
+        <h1>Meet Ups</h1>
     </div>
 
     <div class="row">
         <div class="leftcolumn"></div>
         <div class="rightcolumn">
-            <div class="card">
+            <div class="control">
                 <h2>Control Center</h2>
                 <a href="/meetup.html"><button type="submit" class="btn btn-primary">Post a meetup!</button></a>
                 <br>
