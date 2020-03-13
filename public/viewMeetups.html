@@ -11,98 +11,102 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <style>
         body {
-  font-family: Arial;
-  padding: 20px;
-  background-image: linear-gradient(to bottom right, red, yellow);;
-}
+            font-family: Arial;
+            padding: 20px;
+            background-image: linear-gradient(to bottom right, red, yellow);
+            ;
+        }
 
-/* Header/Blog Title */
-.header {
-  padding: 30px;
-  font-size: 40px;
-  text-align: center;
-  background: yellow;
-}
+        /* Header/Blog Title */
+        .header {
+            padding: 30px;
+            font-size: 40px;
+            text-align: center;
+            background: yellow;
+        }
 
-/* Create two unequal columns that floats next to each other */
-/* Left column */
-.leftcolumn {
-  float: left;
-  width: 75%;
-}
+        /* Create two unequal columns that floats next to each other */
+        /* Left column */
+        .leftcolumn {
+            float: left;
+            width: 75%;
+        }
 
-/* Right column */
-.rightcolumn {
-  float: left;
-  width: 25%;
-  padding-left: 20px;
-}
+        /* Right column */
+        .rightcolumn {
+            float: left;
+            width: 25%;
+            padding-left: 20px;
+        }
 
-/* Add a card effect for articles */
-.card {
-  background-color: white;
-  padding: 20px;
-  margin-top: 20px;
-}
+        /* Add a card effect for articles */
+        .card {
+            background-color: white;
+            padding: 20px;
+            margin-top: 20px;
+        }
 
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
 
-/* Footer */
-.footer {
-  padding: 20px;
-  text-align: center;
-  background: #ddd;
-  margin-top: 20px;
-}
+        /* Footer */
+        .footer {
+            padding: 20px;
+            text-align: center;
+            background: #ddd;
+            margin-top: 20px;
+        }
 
-/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 800px) {
-  .leftcolumn, .rightcolumn {
-    width: 100%;
-    padding: 0;
-  }
-}
+        /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 800px) {
+
+            .leftcolumn,
+            .rightcolumn {
+                width: 100%;
+                padding: 0;
+            }
+        }
     </style>
 </head>
 
 <body>
     <div class="header">
         <h2>Meet Ups</h2>
-      </div>
-      
-      <div class="row">
+    </div>
+
+    <div class="row">
         <div class="leftcolumn">
-          <div class="card">
-            <h2 id="Location"></h2>
-            <h5 id="date"></h5>
-            <p id="name"></p>
-            <p id="message"></p>
-          </div>
-          <div class="card">
-            <h2>TITLE HEADING</h2>
-            <h5>Title description, Sep 2, 2017</h5>
-            <p>Some text..</p>
-          </div>
-        <div class="card">
-            <h2> HEADING</h2>
-            <h5>Title description, Dec 7, 2017</h5>
-            <p>Some text..</p>
-        </div>
+            <div class="card">
+                <h2 id="Location"></h2>
+                <h5 id="date"></h5>
+                <p id="name"></p>
+                <p id="message"></p>
+            </div>
+            <div class="card">
+                <h2>TITLE HEADING</h2>
+                <h5>Title description, Sep 2, 2017</h5>
+                <p>Some text..</p>
+            </div>
+            <div class="card">
+                <h2> HEADING</h2>
+                <h5>Title description, Dec 7, 2017</h5>
+                <p>Some text..</p>
+            </div>
         </div>
         <div class="rightcolumn">
-          <div class="card">
-            <h2>Control Center</h2>
-            <a href="/meetup.html"><button type="submit" class="btn btn-primary">Post A Meetup!</button></a>
-            <br>
-            <a href="/recipe.html"><button type="submit" class="btn btn-warning">Look Up a recipe!</button></a>
-            <br>
-            <a href="/members.html"><button type="submit" class="btn btn-light">Go Home, you're Drunk!</button></a>
+            <div class="card">
+                <h2>Control Center</h2>
+                <a href="/meetup.html"><button type="submit" class="btn btn-primary">Post a meetup!</button></a>
+                <br>
+                <a href="/viewRecipes.html"><button type="submit" class="btn btn-warning">Staying home
+                        instead?</button></a>
+                <br>
+                <a href="/members.html"><button type="submit" class="btn btn-light">Go Home, you're drunk!</button></a>
             </div>
-          </div>
-      </div>
+        </div>
+    </div>
 </body>
