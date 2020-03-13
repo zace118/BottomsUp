@@ -1,4 +1,9 @@
 $(document).ready(function () {
+    $.get("/api/post_meetup", function (recipes) {
+        console.log(recipes);
+        // stuff to do on the page
+    });
+
     const postMeetupForm = $("form#meetup");
     const locationInput = $("#location");
     const dateInput = $("#date");
@@ -9,18 +14,19 @@ $(document).ready(function () {
     //this needs to be the ID of the button you click when you want to drink inPublic
     const inPublic = $("#inPublic");
 
-    // On click of the "At home", pulls the data from the api-route for all the meetups
-    inPublic.on("click", function (event) {
-        event.preventDefault();
-        $.get("/api/post_meetup", function (data) {
-            meetups = data;
-            console.log(meetups)
-        });
 
-    })
+    // // On click of the "At home", pulls the data from the api-route for all the meetups
+    // inPublic.on("click", function (event) {
+    //     event.preventDefault();
+    //     $.get("/api/post_meetup", function (meetups) {
+    //         console.log(meetups);
+    //     });
+
+    // })
 
     postMeetupForm.on("submit", function (event) {
         event.preventDefault();
+        console.log("meetup.js is working");
         const meetupData = {
             location: locationInput.val().trim(),
             date: dateInput.val().trim(),
@@ -47,7 +53,7 @@ $(document).ready(function () {
 
     //Function that posts user recipe
     function postMeetup(location, date, time, message, author) {
-        $.post("/api/post_recipe", {
+        $.post("/api/post_meetup", {
             location: location,
             date: date,
             time: time,
@@ -56,10 +62,10 @@ $(document).ready(function () {
         })
             .then(function (data) {
                 // Need to change route to where ever we want users redirected after meetup has been posted
-                window.location.replace("/members");
+                window.location.replace("/viewMeetups.html");
                 // If there's an error, handle it by throwing up a bootstrap alert
             })
-            .catch(handleLoginErr);
+        // .catch(handleLoginErr);  
     }
 
 })

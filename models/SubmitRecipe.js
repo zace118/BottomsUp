@@ -3,12 +3,12 @@ module.exports = function (sequelize, DataTypes) {
         title: {
             type: DataTypes.STRING,
             allowNull: false,
-            unique: true
+            // unique: true
         },
         recipe: {
             type: DataTypes.STRING,
             allowNull: false,
-            unique: true
+            // unique: true
         },
         spirit: {
             type: DataTypes.STRING,
@@ -17,7 +17,7 @@ module.exports = function (sequelize, DataTypes) {
         author: {
             type: DataTypes.STRING,
             allowNull: false
-         }
+        }
     });
 
     return SubmitRecipe;

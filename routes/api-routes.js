@@ -50,9 +50,11 @@ module.exports = function (app) {
     });
 
     // Route for posting a recipe to the database
-    app.post("/api/post_recipe", passport.authenticate("local"),function (req, res) {
-        console.log(req.body);
-        console.log(db.user);
+    // app.post("/api/post_recipe", passport.authenticate("local"), function (req, res) {
+    app.post("/api/post_recipe", function (req, res) {
+
+        // console.log(req.body);
+        // console.log(db.user);
         db.SubmitRecipe.create({
             title: req.body.title,
             recipe: req.body.recipe,
@@ -67,9 +69,9 @@ module.exports = function (app) {
     });
 
     // Route for posting a meetup to the database
-    app.post("/api/post_meetup", passport.authenticate("local"),function (req, res) {
-        console.log(req.body);
-        console.log(db.user);
+    app.post("/api/post_meetup", function (req, res) {
+        // console.log(req.body);
+        // console.log(db.user);
         db.SubmitMeetup.create({
             location: req.body.location,
             date: req.body.date,
@@ -101,23 +103,24 @@ module.exports = function (app) {
     });
 
     // Route for getting the all the posted recipes data
-    app.get("/api/post_recipe", passport.authenticate("local"), function (req, res) {
-
+    // app.get("/api/post_recipe", passport.authenticate("local"), function (req, res) {
+    app.get("/api/post_recipe", function (req, res) {
         // findAll returns all entries for a table when used with no options
         db.SubmitRecipe.findAll({}).then(function (recipe) {
+            console.log(recipe);
             // We have access to the todos as an argument inside of the callback function
             res.json(recipe);
         });
     });
 
-    app.get("/api/post_meetup", passport.authenticate("local"), function (req, res) {
-
+    // app.get("/api/post_meetup", passport.authenticate("local"), function (req, res) {
+    app.get("/api/post_meetup", function (req, res) {
         // findAll returns all entries for a table when used with no options
         db.SubmitMeetup.findAll({}).then(function (meetup) {
+            console.log(meetup);
             // We have access to the todos as an argument inside of the callback function
             res.json(meetup);
         });
     });
-
 
 };

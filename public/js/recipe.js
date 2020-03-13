@@ -1,25 +1,22 @@
 $(document).ready(function () {
+    // On click of the "At home", pulls the data from the api-route for all recipes
+    $.get("/api/post_recipe", function (recipes) {
+        console.log(recipes);
+        // stuff to do on the page
+    });
+
     const postRecipeForm = $("form#recipe");
     const drinkNameInput = $("#drinkName");
     const recipeInput = $("#recipeBody");
     const spiritInput = $("#category");
-    const authorInput =$("#author")
+    const authorInput = $("#author")
 
     //this needs to be the ID of the button you click when you want to drink at home
-    const atHome = $("#atHome");
-
-    // On click of the "At home", pulls the data from the api-route for all recipes
-    atHome.on("click", function (event) {
-        event.preventDefault();
-        $.get("/api/post_recipe", function (data) {
-            recipes = data;
-            console.log(recipes)
-        });
-
-    })
+    // const atHome = $("#atHome");
 
     postRecipeForm.on("submit", function (event) {
         event.preventDefault();
+        console.log("recipe.js is working");
         const recipeData = {
             title: drinkNameInput.val().trim(),
             recipe: recipeInput.val().trim(),
@@ -51,10 +48,10 @@ $(document).ready(function () {
         })
             .then(function (data) {
                 // Need to change route to where ever we want users redirected after recipe has been posted
-                window.location.replace("/members");
+                window.location.replace("/viewRecipes.html");
                 // If there's an error, handle it by throwing up a bootstrap alert
             })
-            .catch(handleLoginErr);
+        // .catch(handleLoginErr);
     }
 
-})
+});
