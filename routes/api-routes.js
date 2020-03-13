@@ -104,22 +104,24 @@ module.exports = function (app) {
     });
 
     // Route for getting the all the posted recipes data
-    app.get("/api/post_recipe", passport.authenticate("local"), function (req, res) {
-        // app.get("/api/post_recipe", function (req, res) {
+    // app.get("/api/post_recipe", passport.authenticate("local"), function (req, res) {
+    app.get("/api/post_recipe", function (req, res) {
 
 
         // findAll returns all entries for a table when used with no options
         db.SubmitRecipe.findAll({}).then(function (recipe) {
+            console.log(recipe)
             // We have access to the todos as an argument inside of the callback function
             res.json(recipe);
         });
     });
 
-    app.get("/api/post_meetup", passport.authenticate("local"), function (req, res) {
-        // app.get("/api/post_meetup", function (req, res) {
+    // app.get("/api/post_meetup", passport.authenticate("local"), function (req, res) {
+    app.get("/api/post_meetup", function (req, res) {
 
         // findAll returns all entries for a table when used with no options
         db.SubmitMeetup.findAll({}).then(function (meetup) {
+            console.log(meetup)
             // We have access to the todos as an argument inside of the callback function
             res.json(meetup);
         });

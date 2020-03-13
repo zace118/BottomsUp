@@ -9,15 +9,15 @@ $(document).ready(function () {
     //this needs to be the ID of the button you click when you want to drink inPublic
     const inPublic = $("#inPublic");
 
-    // On click of the "At home", pulls the data from the api-route for all the meetups
-    inPublic.on("click", function (event) {
-        event.preventDefault();
-        $.get("/api/post_meetup", function (data) {
-            meetups = data;
-            console.log(meetups)
-        });
 
-    })
+    // // On click of the "At home", pulls the data from the api-route for all the meetups
+    // inPublic.on("click", function (event) {
+    //     event.preventDefault();
+    //     $.get("/api/post_meetup", function (meetups) {
+    //         console.log(meetups);
+    //     });
+
+    // })
 
     postMeetupForm.on("submit", function (event) {
         event.preventDefault();

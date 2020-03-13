@@ -8,15 +8,14 @@ $(document).ready(function () {
     //this needs to be the ID of the button you click when you want to drink at home
     const atHome = $("#atHome");
 
-    // On click of the "At home", pulls the data from the api-route for all recipes
-    atHome.on("click", function (event) {
-        event.preventDefault();
-        $.get("/api/post_recipe", function (data) {
-            recipes = data;
-            console.log(recipes)
-        });
+    // // On click of the "At home", pulls the data from the api-route for all recipes
+    // atHome.on("click", function (event) {
+    //     event.preventDefault();
+    //     $.get("/api/post_recipe", function (recipes) {
+    //         console.log(recipes)
+    //     });
 
-    })
+    // })
 
     postRecipeForm.on("submit", function (event) {
         event.preventDefault();
