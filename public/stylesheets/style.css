@@ -26,6 +26,17 @@ button.edit {
   margin-top: 30px;
 }
 
+.container2 {
+  margin-top: 5px;
+  color: white;
+  text-align: center;
+  width: 300px;
+}
+
+.text29 {
+  color: white;
+}
+
 /* Members Page CSS */
 
 .members {
@@ -48,6 +59,8 @@ button.edit {
   position: absolute;
   top: 0;
   left: 0;
+  font-size: 30px;
+  color: white;
 }
 
 .welcome-images {
@@ -127,9 +140,126 @@ img {
   }
 }
 
-
 .wrapper{
   float:left;
   width:100%;
   text-align:center;
 }
+
+/* Troll page */
+
+.le_troll {
+    position: absolute;
+    margin: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.le_troll_background {
+  background-image: url("../images/rainbow.jpg");
+  background-size: cover;
+}
+
+/* sign up page */
+
+.navbar {
+  background-color: #262626;
+}
+
+.navbar-logo {
+  color: white;
+  font-size: 40px;
+  text-align: center;
+}
+
+.modal-title {
+  text-align: center;
+  color: white;
+}
+
+.modal-content {
+  background-image: url("../images/party.jpg");
+  background-size: cover;
+  color: black;
+
+}
+
+.yes-btn {
+  height: 100px;
+  width: 100px;
+  margin-left: 33%;
+  display:inline-block;
+  font-size: 50px;
+}
+
+.no-btn {
+  height: 100px;
+  width: 100px;
+  display:inline-block;
+  font-size: 50px;
+  margin-left: 10px;
+}
+
+.no-btn:hover {
+  background-color: red;
+}
+
+.yes-btn:hover {
+  background-color: green;
+}
+
+/* cup animation fill */
+
+.body-cup {
+  margin: 0;
+  padding: 0;
+  background: #262626;
+}
+
+.cup {
+  position: absolute;
+  top: 57%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 300px;
+  height: 375px;
+  border: 2px solid #262626;
+  border-top: 2px solid transparent;
+  border-radius: 15px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  background: url("../images/wave.png");
+  background-repeat: repeat-x;
+  animation: animate 10s linear infinite;
+  box-shadow: 0 0 0 6px #fff, 0 20px 35px rgba(0,0,0,1);
+}
+
+.cup:before {
+  content: '';
+  position: absolute;
+  width: 90px;
+  height: 220px;
+  border: 6px solid #fff;
+  right: -95px;
+  top:30px;
+  border-top-right-radius: 35px;
+  border-bottom-right-radius:35px;
+}
+@keyframes animate {
+  0% {
+    background-position: 0 400px;
+  }
+  10% {
+    background-position: 0 800px;
+  }
+  40% {
+    background-position: 1000 -100px;
+  }
+  80% {
+    background-position: 2000px -130px;
+  }
+  100% {
+    background-position: 0px 400px;
+  }
+};
