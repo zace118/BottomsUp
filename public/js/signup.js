@@ -44,3 +44,12 @@ $(document).ready(function () {
         $("#alert").fadeIn(500);
     }
 });
+
+$(document).ready(function() {
+  $("#myModal").modal("show");
+});
+
+document.getElementById("no-btn").onclick = function () {
+    location.href = "re-direct.html"
+};
+
