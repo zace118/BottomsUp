@@ -1,5 +1,4 @@
 $(document).ready(function () {
-    // On click of the "At home", pulls the data from the api-route for all recipes
     $.get("/api/post_recipe", function (recipes) {
         console.log(recipes);
         // stuff to do on the page
@@ -11,8 +10,6 @@ $(document).ready(function () {
     const spiritInput = $("#category");
     const authorInput = $("#author")
 
-    //this needs to be the ID of the button you click when you want to drink at home
-    // const atHome = $("#atHome");
 
     postRecipeForm.on("submit", function (event) {
         event.preventDefault();
@@ -24,7 +21,7 @@ $(document).ready(function () {
             author: authorInput.val().trim()
         };
 
-        // I don't think we need this?...but we're running with it!
+
         if (!recipeData.title || !recipeData.recipe || !recipeData.spirit || !recipeData.author) {
             return;
         }
@@ -53,5 +50,4 @@ $(document).ready(function () {
             })
         // .catch(handleLoginErr);
     }
-
 });
