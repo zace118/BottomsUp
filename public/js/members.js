@@ -10,7 +10,7 @@ $("#atHome").on("click", function () {
     // reroute to meetup.html
     window.location.pathname = "/viewRecipes";
     $.get("/api/post_recipe", function (data) {
-        console.log(data);
+        console.log("members.js line 13...data: " + data);
     })
 })
 
@@ -19,7 +19,7 @@ $("#inPublic").on("click", function () {
     // reroute to meetup.html
     window.location.pathname = "/viewMeetups";
     $.get("/api/post_meetup", function (data) {
-        console.log(data);
+        console.log("members.js line 22...data: " + data);
     })
 })
 
