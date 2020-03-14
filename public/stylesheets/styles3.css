@@ -35,7 +35,6 @@ button.edit {
 
 .text29 {
   color: white;
-  text-align: center;
 }
 
 /* Troll page */
@@ -72,7 +71,7 @@ button.edit {
 }
 
 .modal-content {
-  background-image: url("../images/alcohol-lined-up.jpg");
+  background-image: url("../images/party.jpg");
   background-size: cover;
   color: black;
 
@@ -123,7 +122,7 @@ button.edit {
   border-radius: 15px;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
-  background: url("../images/wave.png");
+  background: url("../images/wave2.png");
   background-repeat: repeat-x;
   animation: animate 10s linear infinite;
   box-shadow: 0 0 0 6px #fff, 0 20px 35px rgba(0,0,0,1);
