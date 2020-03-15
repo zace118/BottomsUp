@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./stylesheets/style.css" media="screen" title="no title">
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <style>
         @import url(https://fonts.googleapis.com/css?family=Walter+Turncoat);
         body {
@@ -61,8 +62,8 @@
                         <input type="text" class="form-control" placeholder="Location of Meetup" id="location">
                         <br />
                         <label for="title">Date:</label>
-                        <input type="text" class="form-control" id="date" placeholder="MM/DD/YY" minlength="4"
-                            maxlength="8" size="8">
+                        <input type="text" class="form-control" id="date" placeholder="MM/DD/YYYY Must be today or a future date" minlength="10"
+                            maxlength="10" size="8">
                         <br />
                         <label for="title">Time:</label>
                         <input type="text" class="form-control" id="time">

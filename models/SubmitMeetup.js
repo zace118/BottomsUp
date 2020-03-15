@@ -8,7 +8,7 @@ module.exports = function (sequelize, DataTypes) {
             type: DataTypes.STRING,
             allowNull: false,
             validate: {
-                len: [8, 8]
+                len: [10, 10]
             }
         },
         time: {
