@@ -28,5 +28,13 @@ module.exports = function (sequelize, DataTypes) {
 
     });
 
+    SubmitMeetup.associate = function(models) {
+    
+
+        SubmitMeetup.hasMany(models.SubmitComment);
+      
+      // associations can be defined here
+    };
+
     return SubmitMeetup;
 }

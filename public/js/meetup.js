@@ -61,6 +61,21 @@ $(document).ready(function () {
 
                 // Appending the cards to the .leftcolumn in the html
                 $(".leftcolumn").append(parentDiv);
+                $(".leftcolumn").append(`<button meetup=${meetups[i].id} type="button" class="btn btn-danger addcomment" data-toggle="modal" data-target="#staticBackdrop">
+                Add Comment
+              </button>`)
+
+              // call the db for all the comments
+              //loop the comments adding after the button
+
+              $.get("/api/comment/" + meetups[i].id).then(function(comments){
+                  console.log("back comments: ", comments)
+                 
+                  $("#meetup"+i).append(`<div class=comments>Comments:</div>`)
+                  comments.map(c=>{
+                  $("#meetup"+i).append(`<h6>${c.message} - ${c.author}</h6>`)
+                  })
+              })
 
                 // Pasting all the info onto the cards, dynamically
                 $("#where" + i).append(whereData);
@@ -68,9 +83,16 @@ $(document).ready(function () {
                 $("#what" + i).append(whatData);
                 $("#who" + i).append(whoData);
 
+                $(".addcomment").on("click", function(){
+                    var meetupId = $(this).attr("meetup")
+                    $("#submitComment").attr("meetupid", meetupId)
+                })
+
+               
+
             }
         
-        // If there are more than 10 objects in the meetups array, it will only post the most recent 10
+    
         else {
            
                 
@@ -88,6 +110,27 @@ $(document).ready(function () {
     });
 
 
+    $("#submitComment").on("click", function(){
+        var newC ={
+            message: $("#messageComment").val(),
+            author: $("#authorComment").val(), 
+        }
+        var meetupId = $(this).attr("meetupid")
+        // create the comment in the db
+        // id meetup and the name and the comment 
+        // ajax call 
+        $.ajax({
+            method:"POST",
+            url:"/api/comment/" + meetupId,
+            data: newC
+        }).then(function(data){
+            console.log("i am back", data)
+           // $('.modal').modal('toggle')
+            location.reload()
+         // call render the comments
+        })
+  
+    })
 
     // ------------The next half of the main function------------
     // Setting variables with jQuery grabbing certain elements on the HTML page
