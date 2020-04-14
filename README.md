@@ -18,11 +18,11 @@ Deployed on [Heroku](https://devcenter.heroku.com/)
 
 ## Authors
 
-* **Matt Cluff** - *Frontend Developer* - [Matt Cluff](https://github.com/mattcluff)
+* **Matt Cluff** - *Frontend Developer* - [mattcluff](https://github.com/mattcluff)
 
-* **Aiden Johnson** - *Frontend Developer* - [Aiden Johnson](https://github.com/axjohnson)
+* **Aiden Johnson** - *Frontend Developer* - [axjohnson](https://github.com/axjohnson)
 
-* **Chris Behrens** - *Backend Developer* - [Chris Behrens](https://github.com/Bearpaw11)
+* **Chris Behrens** - *Backend Developer* - [Bearpaw11](https://github.com/Bearpaw11)
 
 * **Zac Eskridge** - *Backend Developer* - [zace118](https://github.com/zace118)
 
