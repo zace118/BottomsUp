@@ -27,7 +27,7 @@ Deployed on [Heroku](https://devcenter.heroku.com/)
 * **Zac Eskridge** - *Backend Developer* - [zace118](https://github.com/zace118)
 
 
-See also the list of [contributors](https://github.com/zace118/Chambers-Chariots-Character-Generator/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/zace118/BottomsUp/contributors) who participated in this project.
 
 
 ## Acknowledgments
